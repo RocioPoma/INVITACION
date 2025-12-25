@@ -1,0 +1,57 @@
+<div class="envelope-container" [class.open]="isOpen">
+  <div class="envelope" (click)="openInvitation()">
+    <div class="flap"></div>
+    <div class="front">
+      <div class="corner top-left"></div>
+      <div class="corner top-right"></div>
+      <div class="corner bottom-left"></div>
+      <div class="corner bottom-right"></div>
+      <div class="seal">
+        <div class="wax-seal">
+          <span class="initials">S&R</span>
+        </div>
+      </div>
+    </div>
+    <div class="back"></div>
+    <div class="body">
+      <div class="content">
+        <br>
+        <h1 style="color: rgb(227, 227, 94);">Sain & Rocío</h1>
+        <!-- <div class="heart">💛</div> -->
+         <br>
+         <br>
+          <br>
+        <p>¡Nos Casamos!</p>
+        <p class="date" style="color: rgb(243, 243, 167);">25 Enero 2026</p>
+        <p class="instruction">Haz clic para abrir la invitación</p>
+      </div>
+    </div>
+    <div class="letter">
+      <div class="letter-content">
+        <div class="letter-text">
+          <h2>Invitación</h2>
+          <p>Abriendo la invitación...</p>
+          <div class="loading-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <div class="envelope-container" [class.open]="isOpen">
+  <div class="envelope" (click)="openInvitation()">
+    <div class="flap"></div>
+    <div class="body">
+      <div class="content">
+        <h1>Sain & Rocío</h1>
+        <div class="heart">💛</div>
+        <p>¡Nos Casamos!</p>
+        <p class="date">25 Enero 2026</p>
+        <p class="instruction">Haz clic para abrir la invitación</p>
+      </div>
+    </div>
+  </div>
+</div> -->

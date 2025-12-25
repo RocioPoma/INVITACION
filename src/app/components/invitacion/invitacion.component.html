@@ -1,0 +1,198 @@
+<div class="invitation-container">
+    <!-- Header con Cuenta Regresiva -->
+    <header class="header-section">
+        <div class="countdown-container">
+            <h2 class="countdown-title">Faltan:</h2>
+            <div class="countdown">
+                <div class="countdown-item">
+                    <span class="number">{{countdown.days || '00'}}</span>
+                    <span class="label">Días</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="number">{{countdown.hours || '00'}}</span>
+                    <span class="label">Horas</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="number">{{countdown.minutes || '00'}}</span>
+                    <span class="label">Minutos</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="number">{{countdown.seconds || '00'}}</span>
+                    <span class="label">Segundos</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <!-- Título y Padres -->
+        <section class="title-section">
+            <h1 class="main-title">¡Nos Casamos!</h1>
+            <h2 class="couple-names">Sain & Rocío</h2>
+            <p class="blessing">Con la Bendición de Dios y Nuestros Padres</p>
+
+            <div class="parents-container">
+                <div class="parents-group">
+                    <h3>Padres del Novio</h3>
+                    <p>Servando Arcayne Mamani</p>
+                    <p>Sonia Condo (+) </p>
+                </div>
+                <div class="parents-group">
+                    <h3>Padres de la Novia</h3>
+                    <p>Cándido Poma Mamani</p>
+                    <p>Eulalia M. Silvestre García</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detalles de la Boda -->
+        <section class="details-section">
+            <h2>Invitación a Nuestro Matrimonio Religioso y Civil</h2>
+            <div class="details-grid">
+                <div class="detail-item">
+                    <mat-icon>calendar_today</mat-icon>
+                    <div>
+                        <h3>Fecha</h3>
+                        <p>Domingo, 25 de Enero 2026</p>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <mat-icon>schedule</mat-icon>
+                    <div>
+                        <h3>Hora</h3>
+                        <p>14:00 PM</p>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <mat-icon>location_on</mat-icon>
+                    <div>
+                        <h3>Lugar</h3>
+                        <p>Ensueño Eventos, Cochabamba - Bolivia</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Itinerario -->
+        <section class="itinerary-section">
+            <h2>Itinerario</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="time">14:00</div>
+                    <div class="event">Recepción de Invitados</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">14:30</div>
+                    <div class="event">Ceremonia Boda Religiosa</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">15:45</div>
+                    <div class="event">Ceremonia Boda Civil</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">16:15</div>
+                    <div class="event">Sesión de Fotos</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">17:30</div>
+                    <div class="event">Recepción Social</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">23:00</div>
+                    <div class="event">Despedida a los Novios</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Consejeros y Padrinos -->
+        <section class="advisors-section">
+            <h2>Concejeros y Padrinos</h2>
+            <div class="advisors-grid">
+                <div class="advisor">
+                    <h3>Concejero de Matrimonio</h3>
+                    <p>Alejandro Flores Crespo</p>
+                    <p>Willma Taquichiri Zarmiento</p>
+                </div>
+                <div class="advisor">
+                    <h3>Concejero de Anillo</h3>
+                    <p>Cap. Inf. Ivan Iner Silvestre</p>
+                    <p>Carla Lorena Martinez Choque</p>
+                </div>
+                <div class="advisor">
+                    <h3>Padrino de Altar</h3>
+                    <p>José Armando Quispe Condo</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galería de Fotos -->
+        <section class="gallery-section">
+            <h2>Nuestra Galería</h2>
+            <app-photo-gallery></app-photo-gallery>
+        </section>
+
+        <!-- Ubicación -->
+        <section class="location-section">
+            <h2>Ubicación</h2>
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4185.200514276492!2d-66.2296129244406!3d-17.347648383532736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93e3752fbbb0418f%3A0x92a45eee9053227c!2sEnsue%C3%B1o%20Eventos!5e1!3m2!1ses!2sbo!4v1766673665479!5m2!1ses!2sbo"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+
+        <!-- Información Adicional -->
+        <section class="info-section">
+            <div class="info-card">
+                <h3>Código de Vestimenta</h3>
+                <p class="dress-code">Formal</p>
+                <mat-icon>checkroom</mat-icon>
+            </div>
+            <div class="info-card">
+                <h3>Nuestra Música</h3>
+                <p>IL Divo - Hasta mi Final</p>
+                <mat-icon>music_note</mat-icon>
+            </div>
+        </section>
+
+        <!-- Versículo Bíblico -->
+        <section class="verse-section">
+            <div class="verse-card">
+                <h3>1 Corintios 13:4-7 (RV1960)</h3>
+                <p class="verse-text">
+                    El amor es sufrido, es benigno; el amor no tiene envidia, el amor no es jactancioso, no se envanece;
+                    no hace nada indebido, no busca lo suyo, no se irrita, no guarda rencor;
+                    no se goza de la injusticia, mas se goza de la verdad.
+                    Todo lo sufre, todo lo cree, todo lo espera, todo lo soporta.
+                </p>
+            </div>
+        </section>
+
+        <!-- Confirmación de Asistencia -->
+        <section class="rsvp-section">
+            <h2>Confirmación de Asistencia</h2>
+            <button mat-raised-button color="primary" (click)="toggleForm()">
+                Confirmar Asistencia
+            </button>
+
+            <div *ngIf="showForm" class="rsvp-form">
+                <p>Por favor, confirma tu asistencia antes del 10 de Enero 2026</p>
+                <button mat-stroked-button color="accent" (click)="submitRSVP()">
+                    Ir al Formulario de Google
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>¡Esperamos compartir este día especial contigo!</p>
+        <p class="footer-note">Con amor, Sain & Rocío</p>
+        <div class="qr-code">
+            <p>Escanea para ver la invitación digital</p>
+            <!-- Aquí iría el código QR generado -->
+        </div>
+    </footer>
+</div>
