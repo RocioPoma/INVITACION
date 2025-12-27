@@ -1,34 +1,28 @@
 <div class="envelope-container" [class.open]="isOpen">
-
     <div class="envelope" (click)="openInvitation()">
-        <div class="flap"></div>
-        <div class="front">
-            <div class="corner top-left"></div>
-            <div class="corner top-right"></div>
-            <div class="corner bottom-left"></div>
-            <div class="corner bottom-right"></div>
-
+        <!-- Imagen de fondo del sobre -->
+        <div class="envelope-image"></div>
+        
+        <!-- Imagen del cello con animación de pulso -->
+        <div class="cello-container">
+            <img src="assets/images/cello.png" alt="Sello" class="cello-seal">
         </div>
-        <div class="back"></div>
-        <div class="body">
-            <div class="content">
-                <h1 style="color: rgb(227, 227, 94);">Sain & Rocío</h1>
-                <br>
-                <br>
-                <div class="seal">
-                    <div class="wax-seal">
-                        <span class="initials">S&R</span>
-                    </div>
-                </div>
-                <p class="instruction">Haz clic para abrir la invitación</p>
-            </div>
+        
+        <!-- Contenido del sobre -->
+        <div class="envelope-content">
+            <h1 class="names">Sain & Rocio</h1>
+            <p class="instruction">Click para abrir la invitación</p>
         </div>
+        
+        <!-- Carta que aparece al abrir -->
         <div class="letter">
             <div class="letter-content">
                 <div class="letter-text">
                     <h2>Invitación</h2>
                     <p>Abriendo la invitación...</p>
                     <div class="loading-dots">
+                        <span></span>
+                        <span></span>
                         <span></span>
                     </div>
                 </div>
