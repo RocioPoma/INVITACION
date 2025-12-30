@@ -1,45 +1,61 @@
 <div class="invitation-container">
-    <!-- Header con Cuenta Regresiva -->
-    <header class="header-section">
+    <!-- Audio automático (oculto) -->
+    <audio #weddingMusic autoplay loop>
+        <source src="assets/audio/ildivo_hasta_mi_final.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <!-- Imagen de Portada -->
+    <div class="cover-image">
+        <img src="assets/images/Portada01.png" alt="Portada de boda" loading="lazy">
+    </div>
+
+    <!-- Cuenta Regresiva Compacta -->
+    <section class="countdown-section">
         <div class="countdown-container">
-            <h2 class="countdown-title">Faltan:</h2>
-            <div class="countdown">
+            <div class="countdown-title">
+                <i class="fas fa-hourglass-start"></i>
+                <h2>Faltan</h2>
+            </div>
+            <div class="countdown-compact">
                 <div class="countdown-item">
                     <span class="number">{{countdown.days || '00'}}</span>
                     <span class="label">Días</span>
                 </div>
+                <div class="separator" style="color: aliceblue;">:</div>
                 <div class="countdown-item">
                     <span class="number">{{countdown.hours || '00'}}</span>
                     <span class="label">Horas</span>
                 </div>
+                <div class="separator" style="color: aliceblue;">:</div>
                 <div class="countdown-item">
                     <span class="number">{{countdown.minutes || '00'}}</span>
                     <span class="label">Minutos</span>
                 </div>
+                <div class="separator" style="color: aliceblue;">:</div>
                 <div class="countdown-item">
                     <span class="number">{{countdown.seconds || '00'}}</span>
                     <span class="label">Segundos</span>
                 </div>
             </div>
         </div>
-    </header>
+    </section>
 
     <!-- Contenido Principal -->
     <main class="main-content">
         <!-- Título y Padres -->
         <section class="title-section">
             <h1 class="main-title">¡Nos Casamos!</h1>
-            <h2 class="couple-names">Sain & Rocío</h2>
+            <h2 class="couple-names">Sain & Rocio</h2>
             <p class="blessing">Con la Bendición de Dios y Nuestros Padres</p>
-
             <div class="parents-container">
                 <div class="parents-group">
-                    
+
                     <p>Servando Arcayne Mamani</p>
                     <p>Sonia Condo (+) </p>
                 </div>
                 <div class="parents-group">
-                    
+
                     <p>Cándido Poma Mamani</p>
                     <p>Eulalia M. Silvestre García</p>
                 </div>
@@ -47,152 +63,257 @@
         </section>
 
         <!-- Detalles de la Boda -->
-        <section class="details-section">
-            <h2>Invitación a Nuestro Matrimonio Religioso y Civil</h2>
+        <!-- <section class="details-section">
+            <i class="fas fa-ring"></i>
+            <h2> Invitación a Nuestro Matrimonio</h2>
             <div class="details-grid">
                 <div class="detail-item">
-                    <mat-icon>calendar_today</mat-icon>
+                        <p>Tenemos el honor de invitarles a celebrar nuestra unión en Matrimonio de Religión y Civil. Que se efectuará el día:</p>
+                </div>
+                <div class="cover-fecha">
+                    <img src="assets/images/fecha.png" alt="Portada de boda" loading="lazy">
+                </div>
+
+                <div class="detail-item">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
                     <div>
-                        <h3>Fecha</h3>
-                        <p>Domingo, 25 de Enero 2026</p>
+
+                        <button class="location-btn" (click)="openLocation()">
+                            <i class="fas fa-location"></i> Click para ver ubicación
+                        </button>
                     </div>
                 </div>
-                <div class="detail-item">
-                    <mat-icon>schedule</mat-icon>
-                    <div>
-                        <h3>Hora</h3>
-                        <p>14:00 PM</p>
-                    </div>
+            </div>
+        </section> -->
+
+        <!-- Detalles de la Boda -->
+        <section class="details-section">
+            <div class="section-header-center">
+                <i class="fas fa-ring section-icon"></i>
+                <h2>Invitación a Nuestro Matrimonio</h2>
+            </div>
+
+            <div class="details-grid">
+                <div class="invitation-text">
+                    <p>Tenemos el honor de invitarles a celebrar nuestra unión en Matrimonio de Religión y Civil. Que se
+                        efectuará el día:</p>
                 </div>
-                <div class="detail-item">
-                    <mat-icon>location_on</mat-icon>
-                    <div>
-                        <h3>Lugar</h3>
-                        <p>Ensueño Eventos, Cochabamba - Bolivia</p>
+
+                <!-- Imagen de Fecha -->
+                <div class="date-image-container">
+                    <img src="assets/images/fecha.png" alt="Fecha de la boda - 25 de Enero 2026" loading="lazy"
+                        class="date-image">
+                </div>
+
+                <div class="location-container">
+                    <div class="location-wrapper">
+                        <div class="icon-wrapper location-btn" (click)="openLocation()">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="location-content">
+                            <h3>Lugar de la Celebración</h3>
+                            <p class="venue-name">Ensueño Eventos</p>
+                            <p class="venue-location">Cochabamba - Bolivia</p>
+                            <button class="location-btn pulse-animation" (click)="openLocation()">
+                                <i class="fas fa-map-pin"></i> Click para ver ubicación
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Itinerario -->
+        <!-- Itinerario Profesional -->
         <section class="itinerary-section">
-            <h2>Itinerario</h2>
-            <div class="timeline">
+            <div class="section-header section-icon-center">
+                <!-- <i class="fas fa-timeline section-icon "></i> -->
+                <h2>Itinerario de la Celebración</h2>
+            </div>
+            <div class="timeline-professional">
                 <div class="timeline-item">
-                    <div class="time">14:00</div>
-                    <div class="event">Recepción de Invitados</div>
+                    <div style="background: #6f774e;" class="timeline-icon">
+                        <i class="fas fa-glass-cheers"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="time">14:00</div>
+                        <div class="event">Recepción de Invitados</div>
+                        <div class="description">Bienvenida y cóctel de recepción</div>
+                    </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="time">14:30</div>
-                    <div class="event">Ceremonia Boda Religiosa</div>
+                    <div style="background: #6f774e;" class="timeline-icon">
+                        <i class="fas fa-church"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="time">14:30</div>
+                        <div class="event">Ceremonia Religiosa</div>
+                        <div class="description">Misa de matrimonio</div>
+                    </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="time">15:45</div>
-                    <div class="event">Ceremonia Boda Civil</div>
+                    <div style="background: #6f774e;" class="timeline-icon">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="time">15:45</div>
+                        <div class="event">Ceremonia Civil</div>
+                        <div class="description">Firma del acta matrimonial</div>
+                    </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="time">16:15</div>
-                    <div class="event">Sesión de Fotos</div>
+                    <div style="background: #6f774e;" class="timeline-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="time">16:15</div>
+                        <div class="event">Sesión de Fotos</div>
+                        <div class="description">Fotos oficiales con familiares</div>
+                    </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="time">17:30</div>
-                    <div class="event">Recepción Social</div>
+                    <div style="background: #6f774e;" class="timeline-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="time">17:30</div>
+                        <div class="event">Recepción Social</div>
+                        <div class="description">Cena y celebración</div>
+                    </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="time">23:00</div>
-                    <div class="event">Despedida a los Novios</div>
+                    <div style="background: #6f774e;" class="timeline-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="time">23:00</div>
+                        <div class="event">Despedida de los Novios</div>
+                        <div class="description">Lanzamiento de arroz y despedida</div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Consejeros y Padrinos -->
         <section class="advisors-section">
-            <h2>Concejeros y Padrinos</h2>
+            <div class="section-header">
+                <!-- <i class="fas fa-hands-helping"></i> -->
+                <h2>Nuestros Consejeros</h2>
+            </div>
             <div class="advisors-grid">
-                <div class="advisor">
-                    <h3>Concejero de Matrimonio</h3>
-                    <p>Alejandro Flores Crespo</p>
-                    <p>Willma Taquichiri Zarmiento</p>
+                <div class="advisor-card">
+                    <div class="advisor-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Consejero de Matrimonio</h3>
+                    <div class="advisor-names">
+                        <p> Alejandro Flores Crespo</p>
+                        <p> Willma Taquichiri Zarmiento</p>
+                    </div>
                 </div>
-                <div class="advisor">
-                    <h3>Concejero de Anillo</h3>
-                    <p>Cap. Inf. Ivan Iner Silvestre</p>
-                    <p>Carla Lorena Martinez Choque</p>
+                <div class="advisor-card">
+                    <div class="advisor-icon">
+                        <i class="fas fa-ring"></i>
+                    </div>
+                    <h3>Consejero de Anillo</h3>
+                    <div class="advisor-names">
+                        <p> Cap. Inf. Ivan Iner Silvestre</p>
+                        <p> Carla Lorena Martinez Choque</p>
+                    </div>
                 </div>
-                <div class="advisor">
-                    <h3>Padrino de Altar</h3>
-                    <p>José Armando Quispe Condo</p>
+                <div class="advisor-card">
+                    <div class="advisor-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3>Concejero de Altar</h3>
+                    <div class="advisor-names">
+                        <p> José Armando Quispe Condo</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Galería de Fotos -->
         <section class="gallery-section">
-            <h2>Nuestra Galería</h2>
-            <app-photo-gallery></app-photo-gallery>
-        </section>
-
-        <!-- Ubicación -->
-        <section class="location-section">
-            <h2>Ubicación</h2>
-            <div class="map-container">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4185.200514276492!2d-66.2296129244406!3d-17.347648383532736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93e3752fbbb0418f%3A0x92a45eee9053227c!2sEnsue%C3%B1o%20Eventos!5e1!3m2!1ses!2sbo!4v1766673665479!5m2!1ses!2sbo"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="section-header">
+                <i class="fas fa-images"></i>
+                <h2>Nuestra Galería</h2>
             </div>
+            <app-photo-gallery></app-photo-gallery>
         </section>
 
         <!-- Información Adicional -->
         <section class="info-section">
-            <div class="info-card">
-                <h3>Código de Vestimenta</h3>
-                <p class="dress-code">Formal</p>
-                <mat-icon>checkroom</mat-icon>
-            </div>
-            <div class="info-card">
-                <h3>Nuestra Música</h3>
-                <p>IL Divo - Hasta mi Final</p>
-                <mat-icon>music_note</mat-icon>
+            <div class="info-cards">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <h3>Código de Vestimenta</h3>
+                    <p class="dress-code">Formal - Elegante</p>
+                    <p class="info-detail">Traje para caballeros<br>Vestido largo para damas (Sugerencia)</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3>Nuestra Música</h3>
+                    <p class="song-title">IL Divo - Hasta mi Final</p>
+                    <p class="info-detail">Canción especial<br>para nuestro primer baile</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3>Detalles de Regalo</h3>
+                    <p class="gift-info">Su presencia es nuestro mejor regalo</p>
+                    <p class="info-detail">Te esperamos<br>en el lugar del evento</p>
+                </div>
             </div>
         </section>
 
         <!-- Versículo Bíblico -->
         <section class="verse-section">
             <div class="verse-card">
-                <h3>1 Corintios 13:4-7 (RV1960)</h3>
+                <div class="verse-header">
+                    <i class="fas fa-bible"></i>
+                    <h3>1 Corintios 13:4-7</h3>
+                </div>
                 <p class="verse-text">
-                    El amor es sufrido, es benigno; el amor no tiene envidia, el amor no es jactancioso, no se envanece;
-                    no hace nada indebido, no busca lo suyo, no se irrita, no guarda rencor;
-                    no se goza de la injusticia, mas se goza de la verdad.
-                    Todo lo sufre, todo lo cree, todo lo espera, todo lo soporta.
+                    "El amor es sufrido, es benigno; el amor no tiene envidia, el amor no es jactancioso,
+                    no se envanece; no hace nada indebido, no busca lo suyo, no se irrita, no guarda rencor;
+                    no se goza de la injusticia, mas se goza de la verdad. Todo lo sufre, todo lo cree,
+                    todo lo espera, todo lo soporta."
                 </p>
             </div>
         </section>
 
         <!-- Confirmación de Asistencia -->
         <section class="rsvp-section">
-            <h2>Confirmación de Asistencia</h2>
-            <button mat-raised-button color="primary" (click)="toggleForm()">
+            <div class="section-header">
+                <i class="fas fa-clipboard-check"></i>
+                <h2>Confirmación de Asistencia</h2>
+            </div>
+            <p class="rsvp-instruction">Por favor, confirma tu asistencia antes del 20 de Enero 2026</p>
+            <button class="rsvp-btn" (click)="submitRSVP()">
+                <i class="fas fa-check-circle"></i>
                 Confirmar Asistencia
             </button>
-
-            <div *ngIf="showForm" class="rsvp-form">
-                <p>Por favor, confirma tu asistencia antes del 10 de Enero 2026</p>
-                <button mat-stroked-button color="accent" (click)="submitRSVP()">
-                    Ir al Formulario de Google
-                </button>
-            </div>
+            <p class="rsvp-note">Será un honor contar con tu presencia en este día tan especial</p>
         </section>
     </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <p>¡Esperamos compartir este día especial contigo!</p>
-        <p class="footer-note">Con amor, Sain & Rocío</p>
-        <div class="qr-code">
-            <p>Escanea para ver la invitación digital</p>
-            <!-- Aquí iría el código QR generado -->
+        <div class="footer-content">
+            <p class="footer-message">¡Esperamos compartir este día especial contigo!</p>
+            <p class="couple-signature">Con amor,<br><span>Sain & Rocío</span></p>
+            <div class="footer-icons">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-dove"></i>
+                <i class="fas fa-heart"></i>
+            </div>
         </div>
     </footer>
 </div>
