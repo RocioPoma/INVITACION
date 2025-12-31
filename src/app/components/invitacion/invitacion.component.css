@@ -123,7 +123,7 @@ body {
   background: var(--cream);
   text-align: center;
   padding-bottom: 3rem;
-  margin-bottom: 3rem;
+  margin-bottom: 0.4rem;
   padding-top: 3rem;
   
   .main-title {
@@ -214,6 +214,20 @@ body {
     flex-wrap: wrap;
     margin-top: 0px;
 }
+
+
+.timeline-content ul {
+    padding-left: 0; /* Elimina el padding por defecto */
+    margin: 0;       /* Elimina margen adicional */
+    list-style-position: inside; /* Viñetas dentro del bloque */
+}
+
+.timeline-content li {
+    margin-bottom: 4px;  /* Separación entre líneas */
+    list-style-type: disc; /* Tipo de viñeta */
+}
+
+
 
 /* .parents-group {
     background: var(--white);
